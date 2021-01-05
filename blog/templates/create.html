@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="create-form">
+  <h2> Welcome to Blog App </h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input style="width: 250px;" type="submit" value="Add">
+  </form>
+</div>
+{% endblock main%}

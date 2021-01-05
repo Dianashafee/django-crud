@@ -1,0 +1,18 @@
+
+
+{% extends 'base.html' %}
+
+{% block main %}
+  <!-- <h1>Details Page</h1> -->
+  <h3>Click on the blog that u wanna see </h3>
+ 
+    {% for blog in object_list %}
+      <li class="blogs"><a href="{% url 'blog_details' blog.pk %}">{{ blog.title }}</a></li>
+    {% endfor %}
+ 
+    <br>
+    <br>
+    <div class="create-div">
+    <a class="create" href="{% url 'create' %}">Create</a>
+  </div>
+{% endblock main %}

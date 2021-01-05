@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <h3>Name:  {{ blog.title }}</h3>
+    <h3>body:  {{ blog.body }}</h3>
+    <h3>Author: {{ blog.author }}</h3>
+<div class="updateDiv">
+    <a class="update" href="{% url 'update' blog.pk %}">Update</a>
+    <a class="delete" style="font-size: 20px;" href="{% url 'delete' blog.pk %}">Delete</a>
+</div>
+{% endblock main %}  
